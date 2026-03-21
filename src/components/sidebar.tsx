@@ -1,7 +1,8 @@
-'use client'
+"use client";
 
-import Link from "next/link"
-import { FaBars, FaHome } from "react-icons/fa"
+import Link from "next/link";
+
+import { FaBars } from "react-icons/fa";
 import { CiGrid41 } from "react-icons/ci";
 import { RxPeople } from "react-icons/rx";
 import { LuBuilding2 } from "react-icons/lu";
@@ -9,23 +10,25 @@ import { BsPersonGear } from "react-icons/bs";
 import { MdAttachMoney } from "react-icons/md";
 import { FaRegStar } from "react-icons/fa";
 
-interface SidebarProps {
+type SidebarProps = {
   isOpen: boolean;
-  setIsOpen: (open: boolean) => void;
-}
+  setIsOpen: (value: boolean) => void;
+};
 
 export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
   return (
     <>
-      {/* Sidebar */}
-      <nav className={`fixed left-0 top-0 z-10 h-full bg-blue-900 transition-all duration-300 ${isOpen ? "w-56" : "w-16"}`}>
-        {/* Tombol buka/tutup */}
-        <div className="flex justify-end p-2">
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="bg-blue-900 w-8 h-8 rounded flex items-center justify-center text-white hover:bg-orange-300"
-          >
-            <FaBars />
+    <aside
+      className={`fixed top-0 left-0 h-screen bg-blue-900 text-white transition-all duration-300 ${
+        isOpen ? "w-64" : "w-20"
+      }`}
+    >
+      <div className="flex justify-end p-2">
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="bg-blue-900 w-8 h-8 rounded flex items-center justify-center"
+        >
+          <FaBars />
           </button>
         </div>
         
@@ -37,7 +40,7 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
           )}
           
           <li className="flex items-center hover:bg-orange-300 p-3 rounded transition-colors ">
-            <Link href="@/components/sidebar" className="flex items-center w-full">
+            <Link href="/overview" className="flex items-center w-full">
             <CiGrid41 className="mr-2" />
             <span className={`transition-all duration-300 ${isOpen ? "opacity-100" : "opacity-0 w-0 overflow-hidden"}`}>
               Overview
@@ -46,7 +49,7 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
           </li>
 
           <li className="flex items-center hover:bg-orange-300 p-3 rounded transition-colors">
-            <Link href="@/components/sidebar" className="flex items-center w-full">
+            <Link href="@/app/rehabilitasi" className="flex items-center w-full">
             <RxPeople className="mr-2" />
             <span className={`transition-all duration-300 ${isOpen ? "opacity-100" : "opacity-0 w-0 overflow-hidden"}`}>
               Rehabilitasi Klien
@@ -55,7 +58,7 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
           </li>
 
           <li className="flex items-center hover:bg-orange-300 p-3 rounded transition-colors">
-            <Link href="@/components/sidebar" className="flex items-center w-full">
+            <Link href="@/app/kapasitas" className="flex items-center w-full">
             <LuBuilding2 className="mr-2" />
             <span className={`transition-all duration-300 ${isOpen ? "opacity-100" : "opacity-0 w-0 overflow-hidden"}`}>
               Kapasitas & Hunian
@@ -64,7 +67,7 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
           </li>
 
           <li className="flex items-center hover:bg-orange-300 p-3 rounded transition-colors">
-            <Link href="@/components/sidebar" className="flex items-center w-full">
+            <Link href="@/app/sdm" className="flex items-center w-full">
             <BsPersonGear className="mr-2" />
             <span className={`transition-all duration-300 ${isOpen ? "opacity-100" : "opacity-0 w-0 overflow-hidden"}`}>
               SDM
@@ -72,7 +75,7 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
             </Link>
           </li>
           <li className="flex items-center hover:bg-orange-300 p-3 rounded transition-colors">
-            <Link href="@/components/sidebar" className="flex items-center w-full">
+            <Link href="@/app/keuangan" className="flex items-center w-full">
             <MdAttachMoney className="mr-2" />
             <span className={`transition-all duration-300 ${isOpen ? "opacity-100" : "opacity-0 w-0 overflow-hidden"}`}>
               Keuangan
@@ -81,7 +84,7 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
           </li>
 
           <li className="flex items-center hover:bg-orange-300 p-3 rounded transition-colors">
-            <Link href="@/components/sidebar" className="flex items-center w-full">
+            <Link href="@/app/kepuasan" className="flex items-center w-full">
             <FaRegStar className="mr-2" />
             <span className={`transition-all duration-300 ${isOpen ? "opacity-100" : "opacity-0 w-0 overflow-hidden"}`}>
               Kepuasan Layanan
@@ -89,7 +92,8 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
             </Link>
           </li>
         </ul>
-      </nav>
+        </aside>
+      
             {/* Overlay untuk mobile */}
       {isOpen && (
         <div 
@@ -97,6 +101,6 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
           onClick={() => setIsOpen(false)}
         />
       )}
-    </>
-  );
-}
+      </>
+    );
+  }
