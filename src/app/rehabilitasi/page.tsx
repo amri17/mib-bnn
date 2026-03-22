@@ -7,6 +7,8 @@ import { MdOutlineTrendingDown } from "react-icons/md";
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
 import PieChart from "@/components/piecharts"
 import TabelKeberhasilan from "@/components/tabelkeberhasilan";
+import TabelRelapse from "@/components/tabelrelapse";
+import TabelSelesaiRehab from "@/components/selesairehab";
 
 const data = [
     {name: "Jan", value: 20},
@@ -24,10 +26,10 @@ export default function OverviewPage() {
       {/* Header */}
         <div className="mb-4">
         <h1 className="text-2xl font-bold text-gray-800">
-            Overview Dashboard
+            Data Rehabilitas Klien
         </h1>
         <p className="text-sm text-gray-500">
-            Ringkasan data dan metrik utama fasilitas rehabilitasi
+            Informasi lengkap tentang klien yang sedang menjalani rehabilitasi
         </p>
         </div>
 
@@ -41,14 +43,8 @@ export default function OverviewPage() {
             <div className="p-3">
                 <RxPeople className="text-white text-xl"/>
             </div>
-            <div className="flex justify-between items-start">
-            <MdOutlineTrendingUp className="text-green-600 cursor-pointer" />
-            <p className="text-sm text-green-600">
-            +12%
-            </p>
             </div>
-            </div>
-            <h1 className="text-2xl font-bold p-3 text-gray-800 text-left">
+            <h1 className="text-2xl font-bold p-3 text-white text-left">
             247
             </h1>
             <p className="text-sm test-grey">
@@ -57,49 +53,34 @@ export default function OverviewPage() {
         </div>
 
         {/* Card 2 */}
-            <div className="bg-linear-to-r from-blue-500 to-teal-300 p-6 rounded-xl shadow">
+            <div className="bg-linear-to-r from-green-300 to-green-600 p-6 rounded-xl shadow">
             {/* Icon Kanan & Kiri*/}
             <div className="flex justify-between items-start">
             {/*Icon Kiri*/}
             <div className= "p-3">
                 <MdOutlineTrendingUp className="text-white text-xl"/>
             </div>
-            <div className="flex justify-between items-start">
-            <MdOutlineTrendingUp className="text-green-600 cursor-pointer" />
-            <p className="text-sm text-green-600">
-            +5.2%
-            </p>
-            </div>
+            
             </div>
             <h1 className="text-2xl font-bold p-3 text-gray-800 text-left">
-            78.5%
+            194
             </h1>
             <p className="text-sm test-grey">
-            Tingkat Kesembuhan
+            Klien Sembuh
             </p>
         </div>
 
 
         {/* Card 3 */}
-            <div className="bg-linear-to-r from-blue-500 to-teal-300 p-6 rounded-xl shadow">
+            <div className="bg-linear-to-r from-orange-700 to-orange-400 p-6 rounded-xl shadow">
             {/* Icon Kanan & Kiri*/}
             <div className="flex justify-between items-start">
-            {/*Icon Kiri*/}
-            <div className="p-3">
-                <MdOutlineTrendingDown className="text-white text-xl"/>
-            </div>
-            <div className="flex justify-between items-start">
-            <MdOutlineTrendingDown className="text-orange-600 cursor-pointer" />
-            <p className="text-sm text-orange-600">
-            +12%
-            </p>
-            </div>
             </div>
             <h1 className="text-2xl font-bold p-3 text-gray-800 text-left">
-            247
+            30
             </h1>
             <p className="text-sm test-grey">
-            Total Klien Aktif
+            Kasus Relapse
             </p>
         </div>
 
@@ -110,7 +91,7 @@ export default function OverviewPage() {
             {/* Card 1 */}
             <div className="bg-white p-6 rounded-xl shadow">
                 <h1 className="text-2xl font-bold p-3 text-gray-800 text-left">
-                    Tren rehabilitasi Klien
+                    Tren rehabilitasi
                 </h1>
             {/* Icon Kanan & Kiri*/}
             <div className="flex justify-center">
@@ -140,29 +121,65 @@ export default function OverviewPage() {
             {/* Icon Kanan & Kiri*/}
             <div className="flex justify-between items-start">
             <main>
-            <h1 className="text-xl font-bold text-center">
-                Diagram Lingkaran
+            <h1 className="text-xl font-bold text-left">
+                Distribusi Gender
             </h1>
             <PieChart />
             </main>
             </div>
-            <h1 className="text-2xl font-bold p-3 text-gray-800 text-left">
-            247
-            </h1>
-            <p className="text-sm test-grey">
-            Total Klien Aktif
+        </div>
+        <div>
+        <div className="mt-6 min-w-[1200px] bg-white p-6 rounded-xl shadow">
+            <h1 className="text-2xl font-bold p-3 text-green-500 text-left">
+                    A. Tingkat Keberhasilan Rehabilitasi Klien (Pulih)
+                </h1>
+         {/* Tabel 1 */}
+        <div>
+            <main className="w-full">
+            <TabelKeberhasilan />
+            </main>
+            <p className="text-sm test-gray">
+            Total:{" "} 
+            <span className="text-bold text-green-400">
+                8 Klien </span>{" "} berhasil pulih dari rehabilitasi
             </p>
         </div>
+        </div>
 
-        {/* Tabel 1 */}
-        <div className="flex justify-between items-start">
-            <main className="p-4">
-        <h1 className="text-xl font-bold mb-4">
-        Tabel 7 Kolom
-        </h1>
-        <TabelKeberhasilan />
-        </main>
-            </div>
+        <div className="mt-6 min-w-[1200px] bg-white p-6 rounded-xl shadow">
+        <h1 className="text-2xl font-bold p-3 text-orange-700 text-left">
+                    B. Tingkat Relapse (Kambuh Kembali) Klien
+                </h1>
+        {/* Tabel 2 */}
+        <div>
+            <main className="w-full">
+            <TabelRelapse />
+            </main>
+            <p className="text-sm test-gray">
+            Total:{" "} 
+            <span className="text-bold text-orange-600">
+                5 Klien </span>{" "} mengalami relapse
+            </p>
+        </div>
+        </div>
+
+        <div className="mt-6 min-w-[1200px] bg-white p-6 rounded-xl shadow">
+            <h1 className="text-2xl font-bold p-3 text-blue-500 text-left">
+                    C. Jumlah Klien yang Menyelesaikan Program Rehabilitasi (Pulih)
+                </h1>
+         {/* Tabel 1 */}
+        <div>
+            <main className="w-full">
+            <TabelSelesaiRehab />
+            </main>
+            <p className="text-sm test-gray">
+            Total:{" "} 
+            <span className="text-bold text-green-400">
+                6 Klien </span>{" "} menyelesaikan program rehabilitasi
+            </p>
+        </div>
+        </div>
+        </div>
         </div>
 
 

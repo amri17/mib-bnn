@@ -4,18 +4,9 @@
 import { RxPeople } from "react-icons/rx";
 import { MdOutlineTrendingUp } from "react-icons/md";
 import { MdOutlineTrendingDown } from "react-icons/md";
-import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
-import PieChart from "@/components/piecharts"
 import BarChart from "@/components/barchart";
 import HorizontalBarChart from "@/components/horizontalbarchart";
-
-const data = [
-    {name: "Jan", value: 20},
-    {name: "feb", value: 30},
-    {name: "Mar", value: 40},
-    {name: "Apr", value: 50},
-    {name: "Mei", value: 60},
-];
+import TabelKapasitas from "@/components/tabelkapasitas"
 
 
 export default function OverviewPage() {
@@ -129,56 +120,33 @@ export default function OverviewPage() {
         </div>
 
     </div>
-
-        <div className="grid grid-cols-2 gap-4 mt-6">
-
-            {/* Card 1 */}
-            <div className="bg-white p-6 rounded-xl shadow">
-                <h1 className="text-2xl font-bold p-3 text-gray-800 text-left">
-                    Tren rehabilitasi Klien
+<div className="mt-6 min-w-[1200px] bg-white p-6 rounded-xl shadow">
+        <h1 className="text-2xl font-bold p-3 text-black text-center">
+                    TPOP HARIAN
                 </h1>
-            {/* Icon Kanan & Kiri*/}
-            <div className="flex justify-center">
-                <div className="w-full h-64">
-                <ResponsiveContainer>
-                    <LineChart data={data}>
-                    <XAxis dataKey="name" />
-                    <YAxis />
-                    <Tooltip />
-                    <Line type="monotone" dataKey="value" strokeWidth={3} />
-                    </LineChart>
-                </ResponsiveContainer>
-            </div>
-            </div>
-            <div className="flex justify-center">
-            <p className="text-sm text-green-600">
-            Sembuh
-            </p>
-            <p className="text-sm text-orange-600">
-            Relapse
-            </p>
-            </div>
-        </div>
-
-        {/* Card 2 */}
-        <div className="bg-white p-6 rounded-xl shadow">
+                <div className="bg-yellow-200 p-1 rounded-xl shadow">
             {/* Icon Kanan & Kiri*/}
             <div className="flex justify-between items-start">
-            <main>
-            <h1 className="text-xl font-bold text-center">
-                Diagram Lingkaran
-            </h1>
-            <PieChart />
-            </main>
+            {/*Icon Kiri*/}
             </div>
-            <h1 className="text-2xl font-bold p-3 text-gray-800 text-left">
-            247
+            <h1 className="text-2xl font-bold p-3 text-gray-800 text-center">
+            Jumat, 13 Maret 2026
             </h1>
-            <p className="text-sm test-grey">
-            Total Klien Aktif
+        </div>
+        {/* Tabel 2 */}
+        <div>
+            <main className="w-full">
+            <TabelKapasitas />
+            </main>
+            <p className="text-sm test-gray">
+            Total:{" "} 
+            <span className="text-bold text-orange-600">
+                5 Klien </span>{" "} mengalami relapse
             </p>
         </div>
+        </div>
 
+        <div className="w-full p-4">
         {/* Card 3 */}
         <div className="bg-white p-6 rounded-xl shadow">
             {/* Icon Kanan & Kiri*/}
@@ -197,26 +165,6 @@ export default function OverviewPage() {
             Total Klien Aktif
             </p>
         </div>
-
-{/* Card 3 */}
-        <div className="bg-white p-6 rounded-xl shadow">
-            {/* Icon Kanan & Kiri*/}
-            <div className="flex justify-between items-start">
-            <main>
-            <h1 className="text-xl font-bold text-center">
-                Diagram Batang Menyamping
-            </h1>
-            <HorizontalBarChart />
-            </main>
-            </div>
-            <h1 className="text-2xl font-bold p-3 text-gray-800 text-left">
-            247
-            </h1>
-            <p className="text-sm test-grey">
-            Total Klien Aktif
-            </p>
-        </div>
-
         </div>
     </div>
     );

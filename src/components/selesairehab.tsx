@@ -27,7 +27,7 @@ export default function TableModern() {
       <div className="min-w-[1150px] bg-white rounded-2xl shadow-md overflow-hidden">
         
         {/* Header */}
-        <div className="grid grid-cols-[50px_150px_80px_200px_200px_150px_120px] bg-gray-100 px-8 py-5 font-semibold text-gray-700">
+        <div className="grid grid-cols-[50px_150px_80px_200px_200px_150px_120px] bg-blue-400 px-8 py-5 font-semibold text-gray-700">
           <div>No</div>
           <div>Nama</div>
           <div>Umur</div>

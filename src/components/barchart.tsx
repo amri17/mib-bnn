@@ -32,6 +32,7 @@ export default function BarChart() {
 
     const options = {
     responsive: true,
+    maintainAspectRatio: false,
     plugins: {
         legend: {
         position: "top" as const,
@@ -40,7 +41,7 @@ export default function BarChart() {
     };
 
 return (
-    <div className="w-[500px] mx-auto">
+    <div className="w-full h-[400px]">
         <Bar data={data} options={options} />
     </div>
     );
