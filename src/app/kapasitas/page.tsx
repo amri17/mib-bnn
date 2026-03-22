@@ -5,7 +5,6 @@ import { RxPeople } from "react-icons/rx";
 import { MdOutlineTrendingUp } from "react-icons/md";
 import { MdOutlineTrendingDown } from "react-icons/md";
 import BarChart from "@/components/barchart";
-import HorizontalBarChart from "@/components/horizontalbarchart";
 import TabelKapasitas from "@/components/tabelkapasitas"
 
 
@@ -16,10 +15,10 @@ export default function OverviewPage() {
       {/* Header */}
         <div className="mb-4">
         <h1 className="text-2xl font-bold text-gray-800">
-            Overview Dashboard
+            Kapasitas & Hunian Fasilitas
         </h1>
         <p className="text-sm text-gray-500">
-            Ringkasan data dan metrik utama fasilitas rehabilitasi
+            Monitorung kapasitas dan tingkat hunian per fase
         </p>
         </div>
 
@@ -33,89 +32,65 @@ export default function OverviewPage() {
             <div className="p-3">
                 <RxPeople className="text-white text-xl"/>
             </div>
-            <div className="flex justify-between items-start">
-            <MdOutlineTrendingUp className="text-green-600 cursor-pointer" />
-            <p className="text-sm text-green-600">
-            +12%
-            </p>
             </div>
-            </div>
-            <h1 className="text-2xl font-bold p-3 text-gray-800 text-left">
-            247
+            <h1 className="text-2xl font-bold p-3 text-white text-left">
+            115
             </h1>
-            <p className="text-sm test-grey">
-            Total Klien Aktif
+            <p className="text-sm text-white">
+            Total Kapasitas
             </p>
         </div>
 
         {/* Card 2 */}
-            <div className="bg-linear-to-r from-blue-500 to-teal-300 p-6 rounded-xl shadow">
+            <div className="bg-linear-to-r from-green-400 to-green-700 p-6 rounded-xl shadow">
             {/* Icon Kanan & Kiri*/}
             <div className="flex justify-between items-start">
             {/*Icon Kiri*/}
             <div className= "p-3">
                 <MdOutlineTrendingUp className="text-white text-xl"/>
             </div>
-            <div className="flex justify-between items-start">
-            <MdOutlineTrendingUp className="text-green-600 cursor-pointer" />
-            <p className="text-sm text-green-600">
-            +5.2%
-            </p>
             </div>
-            </div>
-            <h1 className="text-2xl font-bold p-3 text-gray-800 text-left">
-            78.5%
+            <h1 className="text-2xl font-bold p-3 text-white text-left">
+            61
             </h1>
-            <p className="text-sm test-grey">
-            Tingkat Kesembuhan
+            <p className="text-sm text-white">
+            TPOP 2026
             </p>
         </div>
 
 
         {/* Card 3 */}
-            <div className="bg-linear-to-r from-blue-500 to-teal-300 p-6 rounded-xl shadow">
+            <div className="bg-linear-to-r from-yellow-400 to-orange-400 p-6 rounded-xl shadow">
             {/* Icon Kanan & Kiri*/}
             <div className="flex justify-between items-start">
             {/*Icon Kiri*/}
             <div className="p-3">
                 <MdOutlineTrendingDown className="text-white text-xl"/>
             </div>
-            <div className="flex justify-between items-start">
-            <MdOutlineTrendingDown className="text-orange-600 cursor-pointer" />
-            <p className="text-sm text-orange-600">
-            +12%
-            </p>
             </div>
-            </div>
-            <h1 className="text-2xl font-bold p-3 text-gray-800 text-left">
-            247
+            <h1 className="text-2xl font-bold p-3 text-white text-left">
+            34
             </h1>
-            <p className="text-sm test-grey">
-            Total Klien Aktif
+            <p className="text-sm text-white">
+            Tempat Kosong
             </p>
         </div>
 
 
         {/* Card 4 */}
-            <div className="bg-linear-to-r from-blue-500 to-teal-300 p-6 rounded-xl shadow">
+            <div className="bg-linear-to-r from-purple-600 to-pink-500 p-6 rounded-xl shadow">
             {/* Icon Kanan & Kiri*/}
             <div className="flex justify-between items-start">
             {/*Icon Kiri*/}
             <div className="p-3">
                 <RxPeople className="text-white text-xl"/>
             </div>
-            <div className="flex justify-between items-start">
-            <MdOutlineTrendingUp className="text-green-600 cursor-pointer" />
-            <p className="text-sm text-green-600">
-            +12%
-            </p>
             </div>
-            </div>
-            <h1 className="text-2xl font-bold p-3 text-gray-800 text-left">
-            247
+            <h1 className="text-2xl font-bold p-3 text-white text-left">
+            53%
             </h1>
-            <p className="text-sm test-grey">
-            Total Klien Aktif
+            <p className="text-sm text-white">
+            Tingkat Hunian
             </p>
         </div>
 

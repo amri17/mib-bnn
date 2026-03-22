@@ -14,96 +14,99 @@ export default function OverviewPage() {
 
       {/* Header */}
         <div className="mb-4">
-        <h1 className="text-2xl font-bold text-gray-800">
-            Overview Dashboard
+        <h1 className="text-2xl font-bold text-gray-800 text-center">
+            DATA SUMBER DAYA MANUSIA
         </h1>
-        <p className="text-sm text-gray-500">
-            Ringkasan data dan metrik utama fasilitas rehabilitasi
+        <p className="text-sm font-semibold text-black text-center">
+            BALAI REHABILITASI NARKOTIKA TANAH MERAH
+        </p>
+        <p className="text-sm font-semibold text-grey-300 text-center">
+            TAHUN 2025
         </p>
         </div>
 
         <div className="grid grid-cols-3 gap-4 mt-6">
 
             {/* Card 1 */}
-            <div className="bg-linear-to-r from-blue-500 to-teal-300 p-6 rounded-xl shadow">
+            <div className="bg-linear-to-r from-blue-800 to-blue-300 p-6 rounded-xl shadow">
             {/* Icon Kanan & Kiri*/}
             <div className="flex justify-between items-start">
             {/*Icon Kiri*/}
             <div className="p-3">
                 <RxPeople className="text-white text-xl"/>
             </div>
-            <div className="flex justify-between items-start">
-            <MdOutlineTrendingUp className="text-green-600 cursor-pointer" />
-            <p className="text-sm text-green-600">
-            +12%
-            </p>
             </div>
-            </div>
-            <h1 className="text-2xl font-bold p-3 text-gray-800 text-left">
-            247
+            <h1 className="text-2xl font-bold p-3 text-white text-left">
+            68
             </h1>
-            <p className="text-sm test-grey">
-            Total Klien Aktif
+            <p className="text-sm text-white">
+            Total Petugas Rehabilitasi
             </p>
         </div>
 
         {/* Card 2 */}
-            <div className="bg-linear-to-r from-blue-500 to-teal-300 p-6 rounded-xl shadow">
+            <div className="bg-linear-to-r from-green-300 to-green-500 p-6 rounded-xl shadow">
             {/* Icon Kanan & Kiri*/}
             <div className="flex justify-between items-start">
             {/*Icon Kiri*/}
             <div className= "p-3">
                 <MdOutlineTrendingUp className="text-white text-xl"/>
             </div>
-            <div className="flex justify-between items-start">
-            <MdOutlineTrendingUp className="text-green-600 cursor-pointer" />
-            <p className="text-sm text-green-600">
-            +5.2%
-            </p>
             </div>
-            </div>
-            <h1 className="text-2xl font-bold p-3 text-gray-800 text-left">
+            <h1 className="text-2xl font-bold p-3 text-white text-left">
             78.5%
             </h1>
-            <p className="text-sm test-grey">
-            Tingkat Kesembuhan
+            <p className="text-sm text-white">
+            TPOP 2026
             </p>
         </div>
 
 
         {/* Card 3 */}
-            <div className="bg-linear-to-r from-blue-500 to-teal-300 p-6 rounded-xl shadow">
+            <div className="bg-linear-to-r from-purple-600 to-pink-500 p-6 rounded-xl shadow">
             {/* Icon Kanan & Kiri*/}
             <div className="flex justify-between items-start">
             {/*Icon Kiri*/}
             <div className="p-3">
                 <MdOutlineTrendingDown className="text-white text-xl"/>
             </div>
-            <div className="flex justify-between items-start">
-            <MdOutlineTrendingDown className="text-orange-600 cursor-pointer" />
-            <p className="text-sm text-orange-600">
-            +12%
-            </p>
             </div>
-            </div>
-            <h1 className="text-2xl font-bold p-3 text-gray-800 text-left">
+            <h1 className="text-2xl font-bold p-3 text-white text-left">
             247
             </h1>
-            <p className="text-sm test-grey">
+            <p className="text-sm text-white">
             Total Klien Aktif
             </p>
         </div>
 
     </div>
 
+    <div className="mt-6 min-w-[1200px] bg-white p-6 rounded-xl shadow">
+            <h1 className="text-2xl font-bold p-3 text-black text-center">
+                        JUMLAH PETUGAS LAYANAN REHABILITASI
+                    </h1>
+            {/* Tabel 2 */}
+            <div>
+                <main className="w-full">
+                <TabelPetugas />
+                </main>
+                <p className="text-sm test-gray">
+                Total:{" "} 
+                <span className="text-bold text-orange-600">
+                    5 Klien </span>{" "} mengalami relapse
+                </p>
+            </div>
+            </div>
+    
+
         <div className="grid grid-cols-2 gap-4 mt-6">
 
 
         <div className="grid grid-cols-2 gap-4 mt-6">
         <div className="mt-6 w-full bg-white p-6 rounded-xl shadow">
-            <h1 className="text-2xl font-bold p-3 text-green-500 text-left">
-                    A. Tingkat Keberhasilan Rehabilitasi Klien (Pulih)
-                </h1>
+            <h1 className="text-xl font-bold p-3 text-black text-center">
+                        JUMLAH SHIFT PETUGAS
+                    </h1>
          {/* Tabel 1 */}
         <div>
             <main className="w-full">
@@ -118,9 +121,9 @@ export default function OverviewPage() {
         </div>
 
         <div className="mt-6 w-full bg-white p-6 rounded-xl shadow">
-            <h1 className="text-2xl font-bold p-3 text-green-500 text-left">
-                    A. Tingkat Keberhasilan Rehabilitasi Klien (Pulih)
-                </h1>
+            <h1 className="text-xl font-bold p-3 text-black text-center">
+                        TURN OVER
+                    </h1>
          {/* Tabel 1 */}
         <div>
             <main className="w-full">
