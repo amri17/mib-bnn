@@ -40,14 +40,14 @@ export default function OverviewPage() {
             {/* Icon Kanan & Kiri*/}
             <div className="flex justify-between items-start">
             {/*Icon Kiri*/}
-            <div className="p-3">
-                <RxPeople className="text-white text-xl"/>
+            <div className="p-1">
+                <RxPeople className="text-white text-5xl"/>
             </div>
             </div>
-            <h1 className="text-2xl font-bold p-3 text-white text-left">
+            <h1 className="text-3xl font-bold p-3 text-white text-left">
             247
             </h1>
-            <p className="text-sm test-grey">
+            <p className="text-sm-2xl text-white">
             Total Klien Aktif
             </p>
         </div>
@@ -57,15 +57,15 @@ export default function OverviewPage() {
             {/* Icon Kanan & Kiri*/}
             <div className="flex justify-between items-start">
             {/*Icon Kiri*/}
-            <div className= "p-3">
-                <MdOutlineTrendingUp className="text-white text-xl"/>
+            <div className= "p-1">
+                <MdOutlineTrendingUp className="text-white text-5xl"/>
             </div>
             
             </div>
-            <h1 className="text-2xl font-bold p-3 text-gray-800 text-left">
+            <h1 className="text-3xl font-bold p-3 text-white text-left">
             194
             </h1>
-            <p className="text-sm test-grey">
+            <p className="text-sm-2xl text-white">
             Klien Sembuh
             </p>
         </div>
@@ -74,12 +74,13 @@ export default function OverviewPage() {
         {/* Card 3 */}
             <div className="bg-linear-to-r from-orange-700 to-orange-400 p-6 rounded-xl shadow">
             {/* Icon Kanan & Kiri*/}
-            <div className="flex justify-between items-start">
+            <div className= "p-1">
+                <MdOutlineTrendingDown className="text-white text-5xl"/>
             </div>
-            <h1 className="text-2xl font-bold p-3 text-gray-800 text-left">
+            <h1 className="text-3xl font-bold p-3 text-white text-left">
             30
             </h1>
-            <p className="text-sm test-grey">
+            <p className="text-sm-2xl text-white">
             Kasus Relapse
             </p>
         </div>
@@ -129,7 +130,7 @@ export default function OverviewPage() {
             </div>
         </div>
         <div>
-        <div className="mt-6 min-w-[1200px] bg-white p-6 rounded-xl shadow">
+        <div className="mt-6 min-w-[1185px] bg-white p-6 rounded-xl shadow">
             <h1 className="text-2xl font-bold p-3 text-green-500 text-left">
                     A. Tingkat Keberhasilan Rehabilitasi Klien (Pulih)
                 </h1>
@@ -146,7 +147,7 @@ export default function OverviewPage() {
         </div>
         </div>
 
-        <div className="mt-6 min-w-[1200px] bg-white p-6 rounded-xl shadow">
+        <div className="mt-6 min-w-[1185px] bg-white p-6 rounded-xl shadow">
         <h1 className="text-2xl font-bold p-3 text-orange-700 text-left">
                     B. Tingkat Relapse (Kambuh Kembali) Klien
                 </h1>
@@ -163,7 +164,7 @@ export default function OverviewPage() {
         </div>
         </div>
 
-        <div className="mt-6 min-w-[1200px] bg-white p-6 rounded-xl shadow">
+        <div className="mt-6 min-w-[1185px] bg-white p-6 rounded-xl shadow">
             <h1 className="text-2xl font-bold p-3 text-blue-500 text-left">
                     C. Jumlah Klien yang Menyelesaikan Program Rehabilitasi (Pulih)
                 </h1>
@@ -174,7 +175,7 @@ export default function OverviewPage() {
             </main>
             <p className="text-sm test-gray">
             Total:{" "} 
-            <span className="text-bold text-green-400">
+            <span className="text-bold text-blue-500">
                 6 Klien </span>{" "} menyelesaikan program rehabilitasi
             </p>
         </div>

@@ -32,14 +32,14 @@ export default function OverviewPage() {
             {/* Icon Kanan & Kiri*/}
             <div className="flex justify-between items-start">
             {/*Icon Kiri*/}
-            <div className="p-3">
-                <RxPeople className="text-white text-xl"/>
+            <div className="p-1">
+                <RxPeople className="text-white text-5xl"/>
             </div>
             </div>
-            <h1 className="text-2xl font-bold p-3 text-white text-left">
+            <h1 className="text-3xl font-bold p-3 text-white text-left">
             68
             </h1>
-            <p className="text-sm text-white">
+            <p className="text-sm-2xl text-white">
             Total Petugas Rehabilitasi
             </p>
         </div>
@@ -49,14 +49,14 @@ export default function OverviewPage() {
             {/* Icon Kanan & Kiri*/}
             <div className="flex justify-between items-start">
             {/*Icon Kiri*/}
-            <div className= "p-3">
-                <MdOutlineTrendingUp className="text-white text-xl"/>
+            <div className= "p-1">
+                <MdOutlineTrendingUp className="text-white text-5xl"/>
             </div>
             </div>
-            <h1 className="text-2xl font-bold p-3 text-white text-left">
+            <h1 className="text-3xl font-bold p-3 text-white text-left">
             78.5%
             </h1>
-            <p className="text-sm text-white">
+            <p className="text-sm-2xl text-white">
             TPOP 2026
             </p>
         </div>
@@ -67,14 +67,14 @@ export default function OverviewPage() {
             {/* Icon Kanan & Kiri*/}
             <div className="flex justify-between items-start">
             {/*Icon Kiri*/}
-            <div className="p-3">
-                <MdOutlineTrendingDown className="text-white text-xl"/>
+            <div className="p-1">
+                <MdOutlineTrendingDown className="text-white text-5xl"/>
             </div>
             </div>
-            <h1 className="text-2xl font-bold p-3 text-white text-left">
+            <h1 className="text-3xl font-bold p-3 text-white text-left">
             247
             </h1>
-            <p className="text-sm text-white">
+            <p className="text-sm-2xl text-white">
             Total Klien Aktif
             </p>
         </div>
@@ -90,17 +90,9 @@ export default function OverviewPage() {
                 <main className="w-full">
                 <TabelPetugas />
                 </main>
-                <p className="text-sm test-gray">
-                Total:{" "} 
-                <span className="text-bold text-orange-600">
-                    5 Klien </span>{" "} mengalami relapse
-                </p>
             </div>
             </div>
     
-
-        <div className="grid grid-cols-2 gap-4 mt-6">
-
 
         <div className="grid grid-cols-2 gap-4 mt-6">
         <div className="mt-6 w-full bg-white p-6 rounded-xl shadow">
@@ -112,11 +104,6 @@ export default function OverviewPage() {
             <main className="w-full">
             <TabelShiftPetugas />
             </main>
-            <p className="text-sm test-gray">
-            Total:{" "} 
-            <span className="text-bold text-green-400">
-                8 Klien </span>{" "} berhasil pulih dari rehabilitasi
-            </p>
         </div>
         </div>
 
@@ -129,18 +116,12 @@ export default function OverviewPage() {
             <main className="w-full">
             <TabelShiftPetugas />
             </main>
-            <p className="text-sm test-gray">
-            Total:{" "} 
-            <span className="text-bold text-green-400">
-                8 Klien </span>{" "} berhasil pulih dari rehabilitasi
-            </p>
         </div>
         </div>
 
         </div>
 
         </div>
-    </div>
     );
 }
 

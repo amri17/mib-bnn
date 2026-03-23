@@ -30,14 +30,14 @@ export default function OverviewPage() {
             {/* Icon Kanan & Kiri*/}
             <div className="flex justify-between items-start">
             {/*Icon Kiri*/}
-            <div className="p-3">
-                <RxPeople className="text-white text-xl"/>
+            <div className="p-1">
+                <RxPeople className="text-white text-5xl"/>
             </div>
             </div>
-            <h1 className="text-2xl font-bold p-3 text-white text-left">
+            <h1 className="text-3xl font-bold p-3 text-white text-left">
             Rp 4.743.000
             </h1>
-            <p className="text-sm text-white">
+            <p className="text-sm-2xl text-white">
             Rata-rata Biaya Per Orang
             </p>
         </div>
@@ -47,21 +47,21 @@ export default function OverviewPage() {
             {/* Icon Kanan & Kiri*/}
             <div className="flex justify-between items-start">
             {/*Icon Kiri*/}
-            <div className= "p-3">
-                <MdOutlineTrendingUp className="text-white text-xl"/>
+            <div className= "p-1">
+                <MdOutlineTrendingUp className="text-white text-5xl"/>
             </div>
             </div>
-            <h1 className="text-2xl font-bold p-3 text-white text-left">
+            <h1 className="text-3xl font-bold p-3 text-white text-left">
             100%
             </h1>
-            <p className="text-sm text-white">
+            <p className="text-sm-2xl text-white">
             Realisasi Anggaran
             </p>
         </div>
 
     </div>
 
-        <div className="mt-6 min-w-[1200px] bg-white p-6 rounded-xl shadow">
+        <div className="mt-6 min-w-[1200px] bg-white p-2 rounded-xl shadow">
             <h1 className="text-2xl font-bold p-3 text-black text-center">
                         RATA-RATA BIAYA RAHABILITASI NARKOBA RAWAT INAP DI BALAI REHABILITASI BNN 
                         TANAH MERAH T.A. 2025
@@ -71,11 +71,6 @@ export default function OverviewPage() {
                 <main className="w-full">
                 <TabelKeuangan />
                 </main>
-                <p className="text-sm test-gray">
-                Total:{" "} 
-                <span className="text-bold text-orange-600">
-                    5 Klien </span>{" "} mengalami relapse
-                </p>
             </div>
             </div>
     </div>

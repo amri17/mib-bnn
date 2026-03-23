@@ -6,7 +6,8 @@ import { MdOutlineTrendingUp } from "react-icons/md";
 import { MdOutlineTrendingDown } from "react-icons/md";
 import BarChart from "@/components/barchart";
 import TabelKapasitas from "@/components/tabelkapasitas"
-
+import { LuBuilding2 } from "react-icons/lu";
+import { GoPulse } from "react-icons/go";
 
 export default function OverviewPage() {
     return (
@@ -30,13 +31,13 @@ export default function OverviewPage() {
             <div className="flex justify-between items-start">
             {/*Icon Kiri*/}
             <div className="p-3">
-                <RxPeople className="text-white text-xl"/>
+                <LuBuilding2 className="text-white text-5xl"/>
             </div>
             </div>
-            <h1 className="text-2xl font-bold p-3 text-white text-left">
+            <h1 className="text-3xl font-bold p-3 text-white text-left">
             115
             </h1>
-            <p className="text-sm text-white">
+            <p className="text-sm-2xl text-white">
             Total Kapasitas
             </p>
         </div>
@@ -47,13 +48,13 @@ export default function OverviewPage() {
             <div className="flex justify-between items-start">
             {/*Icon Kiri*/}
             <div className= "p-3">
-                <MdOutlineTrendingUp className="text-white text-xl"/>
+                <MdOutlineTrendingUp className="text-white text-5xl"/>
             </div>
             </div>
-            <h1 className="text-2xl font-bold p-3 text-white text-left">
+            <h1 className="text-3xl font-bold p-3 text-white text-left">
             61
             </h1>
-            <p className="text-sm text-white">
+            <p className="text-sm-2xl text-white">
             TPOP 2026
             </p>
         </div>
@@ -65,13 +66,13 @@ export default function OverviewPage() {
             <div className="flex justify-between items-start">
             {/*Icon Kiri*/}
             <div className="p-3">
-                <MdOutlineTrendingDown className="text-white text-xl"/>
+                <LuBuilding2 className="text-white text-5xl"/>
             </div>
             </div>
-            <h1 className="text-2xl font-bold p-3 text-white text-left">
+            <h1 className="text-3xl font-bold p-3 text-white text-left">
             34
             </h1>
-            <p className="text-sm text-white">
+            <p className="text-sm-2xl text-white">
             Tempat Kosong
             </p>
         </div>
@@ -82,14 +83,14 @@ export default function OverviewPage() {
             {/* Icon Kanan & Kiri*/}
             <div className="flex justify-between items-start">
             {/*Icon Kiri*/}
-            <div className="p-3">
-                <RxPeople className="text-white text-xl"/>
+            <div className="p-1">
+                <GoPulse className="text-white text-5xl"/>
             </div>
             </div>
-            <h1 className="text-2xl font-bold p-3 text-white text-left">
+            <h1 className="text-3xl font-bold p-3 text-white text-left">
             53%
             </h1>
-            <p className="text-sm text-white">
+            <p className="text-sm-2xl text-white">
             Tingkat Hunian
             </p>
         </div>
